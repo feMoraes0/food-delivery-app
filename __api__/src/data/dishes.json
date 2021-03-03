@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Veggie tomato mix",
+    "price": "N1,900",
+    "image": "http://localhost:3333/static/veggie-tomato-mix.png",
+    "category": "foods"
+  },
+  {
+    "name": "Spicy Fish Sauce",
+    "price": "N1,900",
+    "image": "http://localhost:3333/static/",
+    "category": "foods"
+  },
+  {
+    "name": "Fried Chicken M",
+    "price": "N1,900",
+    "image": "http://localhost:3333/static/fried-chicken-m.png",
+    "category": "foods"
+  },
+  {
+    "name": "Egg and Cucumber on Dish",
+    "price": "N1,900",
+    "image": "http://localhost:3333/static/fried-chicken-m.png",
+    "category": "foods"
+  },
+  {
+    "name": "Spicy Fish Sauce",
+    "price": "N2,300",
+    "image": "http://localhost:3333/static/spicy-fish-sauce.png",
+    "category": "sauces"
+  }
+]

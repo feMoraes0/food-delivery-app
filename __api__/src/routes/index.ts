@@ -1,5 +1,5 @@
-import {TIMEOUT} from 'dns';
 import express, {Request, Response} from 'express';
+import dishes from '../data/dishes.json';
 
 const routes = express.Router();
 
@@ -14,6 +14,14 @@ routes.get(
   async (request: Request, response: Response): Promise<Response> => {
     await sleep();
     return response.json({message: 'success'});
+  },
+);
+
+routes.get(
+  '/dishes',
+  async (request: Request, response: Response): Promise<Response> => {
+    await sleep();
+    return response.json(dishes);
   },
 );
 
