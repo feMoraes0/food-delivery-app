@@ -2,6 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {Colours} from '../../theme';
 import Logo from '../../../assets/images/logo.png';
+import ToyFacesGirl from '../../../assets/images/onboarding/toy-faces-girl.png';
+import ToyFacesBoy from '../../../assets/images/onboarding/toy-faces-boy.png';
 import Button from '../../components/Button';
 
 const Onboarding = () => {
@@ -12,7 +14,12 @@ const Onboarding = () => {
       </View>
       <Text style={style.text}>Food for</Text>
       <Text style={style.text}>Everyone</Text>
-
+      <View style={style.detailGirl}>
+        <Image source={ToyFacesGirl} style={style.detailGirlImage} />
+      </View>
+      <View style={style.detailBoy}>
+        <Image source={ToyFacesBoy} style={style.detailBoyImage} />
+      </View>
       <Button onPress={() => {}}>Get started</Button>
     </View>
   );
@@ -49,6 +56,27 @@ const style = StyleSheet.create({
     lineHeight: 65.0,
     color: Colours.kWhiteColour,
   },
+  detailGirl: {
+    position: 'absolute',
+    bottom: 96.0,
+    left: -82.0,
+    width: 358.1,
+    height: 434.36,
+    zIndex: -1,
+    transform: [{rotate: '-3.1deg'}],
+  },
+  detailGirlImage: {},
+
+  detailBoy: {
+    position: 'absolute',
+    bottom: 125.75,
+    right: -75.0,
+    width: 225.4,
+    height: 298.54,
+    zIndex: -1,
+    transform: [{rotate: '8.57deg'}],
+  },
+  detailBoyImage: {},
 });
 
 export default {component: Onboarding, name: 'Onboarding'};
