@@ -6,8 +6,19 @@ import ToyFacesGirl from '../../../assets/images/onboarding/toy-faces-girl.png';
 import ToyFacesBoy from '../../../assets/images/onboarding/toy-faces-boy.png';
 import Button from '../../components/Button';
 import LinearGradient from 'react-native-linear-gradient';
+import {StackNavigationProp} from '@react-navigation/stack';
+import Login from './Login';
+import {ParamListBase} from '@react-navigation/routers';
 
-const Onboarding = () => {
+interface OnboardingProps {
+  navigation: StackNavigationProp<ParamListBase, string>;
+}
+
+const Onboarding = ({navigation}: OnboardingProps) => {
+  const getStart = () => {
+    navigation.navigate(Login.name);
+  };
+
   return (
     <View style={style.container}>
       <View style={style.logoBox}>
@@ -26,7 +37,7 @@ const Onboarding = () => {
         locations={[0, 0.43]}
         colors={['rgba(255, 71, 11, 0.01)', 'rgba(255, 71, 11, 1)']}
       />
-      <Button onPress={() => {}}>Get started</Button>
+      <Button onPress={getStart}>Get started</Button>
     </View>
   );
 };
