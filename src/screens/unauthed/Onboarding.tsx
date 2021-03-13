@@ -5,6 +5,7 @@ import Logo from '../../../assets/images/logo.png';
 import ToyFacesGirl from '../../../assets/images/onboarding/toy-faces-girl.png';
 import ToyFacesBoy from '../../../assets/images/onboarding/toy-faces-boy.png';
 import Button from '../../components/Button';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Onboarding = () => {
   return (
@@ -20,6 +21,11 @@ const Onboarding = () => {
       <View style={style.detailBoy}>
         <Image source={ToyFacesBoy} style={style.detailBoyImage} />
       </View>
+      <LinearGradient
+        style={style.gradientBox}
+        locations={[0, 0.43]}
+        colors={['rgba(255, 71, 11, 0.01)', 'rgba(255, 71, 11, 1)']}
+      />
       <Button onPress={() => {}}>Get started</Button>
     </View>
   );
@@ -77,6 +83,12 @@ const style = StyleSheet.create({
     transform: [{rotate: '8.57deg'}],
   },
   detailBoyImage: {},
+  gradientBox: {
+    width: '100%',
+    height: 242.0,
+    position: 'absolute',
+    bottom: 0,
+  },
 });
 
 export default {component: Onboarding, name: 'Onboarding'};
