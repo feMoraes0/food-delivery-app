@@ -7,7 +7,7 @@ import ToyFacesBoy from '../../../assets/images/onboarding/toy-faces-boy.png';
 import Button from '../../components/Button';
 import LinearGradient from 'react-native-linear-gradient';
 import {StackNavigationProp} from '@react-navigation/stack';
-import Login from './Login';
+import Registration from './Registration';
 import {ParamListBase} from '@react-navigation/routers';
 
 interface OnboardingProps {
@@ -16,7 +16,7 @@ interface OnboardingProps {
 
 const Onboarding = ({navigation}: OnboardingProps) => {
   const getStart = () => {
-    navigation.navigate(Login.name);
+    navigation.navigate(Registration.name);
   };
 
   return (
